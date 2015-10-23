@@ -174,3 +174,24 @@
 	text-align:center;
 	width:100%;
 }
+
+/* solution for column height problem
+		Found @ http://codepen.io/hashem/pen/zwJaE
+*/
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+	background-color: #efbf2d;
+
+}
+
+.vertical-align > [class^="col-"] > div,
+.vertical-align > [class*=" col-"] > div {
+  /* flex: 1; */
+  flex-grow: 1;
+}
