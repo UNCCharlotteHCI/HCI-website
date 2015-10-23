@@ -175,6 +175,10 @@
 	width:100%;
 }
 
+.panel.panel-default {
+	background-color:#efbf2d;
+}
+
 /* solution for column height problem
 		Found @ http://codepen.io/hashem/pen/zwJaE
 */
