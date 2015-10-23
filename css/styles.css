@@ -5,6 +5,10 @@
 	margin-bottom: 20px;
 	color: #efbf2d;
 }
+.unccLogo {
+	max-width: 200px;
+	margin: 25px 0 0 25px;
+}
 .logo h1{
 	margin-bottom: 0px;
 	font-size: 52px;
@@ -46,9 +50,32 @@
 	margin-right: 5px;
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 367px;
+    overflow-x: hidden;
+}
+.panel{
+	border: 0;
+	border-radius: 0px;
+}
 .thumbnail{
 	background-color: #efbf2d;
+	border: 0;
+	border-radius: 0px;
+	padding: 0px;
 }
+.thumbnail img{
+	min-width: 100%;
+}
+.modal img{
+	margin: 0 10px 10px 0px;
+	max-width:130px;
+}
+.tab-pane{
+	margin-top: 15px;
+}
+
 .caption h3{
 	margin-top: 5px;
 	font-size: 16px;
@@ -67,6 +94,7 @@
 .col-md-3 .panel-heading{
 	background-color: #efbf2d;
 	border: 0;
+	border-radius: 0px;
 	padding: 0;
 }
 .col-md-3 .panel-body{
@@ -91,7 +119,7 @@
 
 .carousel-inner{
 	width:90%;
-	margin: 0 auto;
+	margin: auto;
 }
 .carousel-control{
 	width:10%;
@@ -108,9 +136,19 @@
 	color: #efbf2d;
 	margin-right: 0px;
 }
+.carousel-indicators {
+	bottom:-25px;
+}
+.carousel-indicators li {
+	background-color: #999;
+	background-color: rgba(70,70,70,.25);
+}
+.carousel-indicators .active {
+	background-color: #efbf2d;
+}
 
 .content{
-	/*margin-top: 20px;*/
+	margin-top: 15px;
 	margin-bottom: 15px;
 	padding-right: 30px;
 	padding-left: 30px;

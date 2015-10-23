@@ -11,9 +11,8 @@
 
 	<body>
 		<!-- LOGO OF THE WEBSITE -->
-		<img class="unccLogo" src="images/logo.png" align="left" alt="University of North Carolina at Charlotte" />
 		<div class="container logo">
-			<a href="index.html">
+			<a href="#">
 				<h1>HCI Lab</h1>
 				University of North Carolina at Charlotte
 			</a>
@@ -27,9 +26,9 @@
 				</button>
 				<div class = "collapse navbar-collapse navHeaderCollapse">
 					<ul class = "nav navbar-nav">
-						<li class="active"><a href="index.html">HOME</a></li>
+						<li><a href="index.html">HOME</a></li>
 						<li><a href="people.html">PEOPLE</a></li>
-						<li><a href="research.html">RESEARCH</a></li>
+						<li class="active"><a href="research.html">RESEARCH</a></li>
 						<li><a href="#">ACADEMICS</a></li>
 						<li><a href="#">EVENTS</a></li>
 						<!-- IN CASE WE NEEDED A DROPDOWN MENU ITEM 
@@ -50,7 +49,13 @@
 		<!-- END OF TOP MENU -->
 		<!-- CAROUSEL CONTENT -->
 		<div id="carousel-content" class="carousel slide" data-ride="carousel">
-			
+			<!-- Indicators 
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-content" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-content" data-slide-to="1"></li>
+				<li data-target="#carousel-content" data-slide-to="2"></li>
+			</ol>
+			-->
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
@@ -79,24 +84,7 @@
 				</div>	
 					
 				
-				<div class="item">
-					<div class = "container">
-						<div class = "row">
-							<div class = "col-md-3">
-								<div id="announcements2"></div>
-							</div>
-							<div class = "col-md-3">
-								<div id="column4"></div>
-							</div>
-							<div class = "col-md-3">
-								<div id="column5"></div>
-							</div>
-							<div class = "col-md-3">
-								<div id="column6"></div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				
 			</div>
 			<!-- Controls -->
@@ -108,12 +96,6 @@
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="false"></span>
 			<span class="sr-only">Next</span>
 			</a>
-			
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-content" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-content" data-slide-to="1"></li>
-			</ol>
 			
 		</div>
 		<!-- END OF CAROUSEL CONTENT -->
@@ -128,8 +110,6 @@
 		<div class="modal fade" id="tangibleModal" tabindex="-1" role="dialog" aria-labelledby="tangibleModalLabel"></div>
 		<div class="modal fade" id="dlwtModal" tabindex="-1" role="dialog" aria-labelledby="dlwtModalLabel"></div>
 		<div class="modal fade" id="naturenetModal" tabindex="-1" role="dialog" aria-labelledby="naturenetModalLabel"></div>
-		<div class="modal fade" id="marionetteModal" tabindex="-1" role="dialog" aria-labelledby="marionetteModalLabel"></div>
-		<div class="modal fade" id="announce1Modal" tabindex="-1" role="dialog" aria-labelledby="announce1ModalLabel"></div>
 		<!-- END OF MODALS -->
 		
 		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -137,16 +117,14 @@
 			$(function(){ $("#announcements1").load("contents/home/announcements.html"); });
 			$(function(){ $("#announcements2").load("contents/home/announcements.html"); });
 			$(function(){ $("#column1").load("contents/home/column1_nn.html"); }); 
-			$(function(){ $("#column2").load("contents/home/column2_marionette.html"); }); 
+			$(function(){ $("#column2").load("contents/home/column2_dlwt.html"); }); 
 			$(function(){ $("#column3").load("contents/home/column3_tangible.html"); }); 
-			$(function(){ $("#column4").load("contents/home/column2_dlwt.html"); }); 
+			$(function(){ $("#column4").load("contents/home/column4.html"); }); 
 			$(function(){ $("#column5").load("contents/home/column5.html"); }); 
 			$(function(){ $("#column6").load("contents/home/column6.html"); }); 
 			$(function(){ $("#tangibleModal").load("contents/research/tangible_creativity.html"); });
 			$(function(){ $("#dlwtModal").load("contents/research/dlwt.html"); });
 			$(function(){ $("#naturenetModal").load("contents/research/naturenet.html"); });
-			$(function(){ $("#marionetteModal").load("contents/research/marionette.html"); });
-			$(function(){ $("#announce1Modal").load("contents/home/announce1.html"); });
 		</script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>

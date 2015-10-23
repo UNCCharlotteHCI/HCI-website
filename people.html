@@ -11,7 +11,6 @@
 
 	<body>
 		<!-- LOGO OF THE WEBSITE -->
-		<img class="unccLogo" src="images/logo.png" align="left" alt="University of North Carolina at Charlotte" />
 		<div class="container logo">
 			<a href="index.html">
 				<h1>HCI Lab</h1>
@@ -27,8 +26,8 @@
 				</button>
 				<div class = "collapse navbar-collapse navHeaderCollapse">
 					<ul class = "nav navbar-nav">
-						<li class="active"><a href="index.html">HOME</a></li>
-						<li><a href="people.html">PEOPLE</a></li>
+						<li><a href="index.html">HOME</a></li>
+						<li class="active"><a href="people.html">PEOPLE</a></li>
 						<li><a href="research.html">RESEARCH</a></li>
 						<li><a href="#">ACADEMICS</a></li>
 						<li><a href="#">EVENTS</a></li>
@@ -63,7 +62,7 @@
 					<div class = "container">
 						<div class = "row">
 							<div class = "col-md-3 col-sm-height">
-								<div id="announcements1"></div>
+								<div id="_list"></div>
 							</div>
 							<div class = "col-md-3 col-sm-height">
 								<div id="column1"></div>
@@ -78,13 +77,9 @@
 					</div>
 				</div>	
 					
-				
 				<div class="item">
 					<div class = "container">
 						<div class = "row">
-							<div class = "col-md-3">
-								<div id="announcements2"></div>
-							</div>
 							<div class = "col-md-3">
 								<div id="column4"></div>
 							</div>
@@ -94,9 +89,15 @@
 							<div class = "col-md-3">
 								<div id="column6"></div>
 							</div>
+							<div class = "col-md-3">
+								<div id="column7"></div>
+							</div>
 						</div>
 					</div>
-				</div>
+				</div>	
+				
+				
+				
 				
 			</div>
 			<!-- Controls -->
@@ -108,7 +109,7 @@
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="false"></span>
 			<span class="sr-only">Next</span>
 			</a>
-			
+            
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-content" data-slide-to="0" class="active"></li>
@@ -125,28 +126,33 @@
 		<!-- END OF FOOTER -->
 		
 		<!-- MODALS -->
-		<div class="modal fade" id="tangibleModal" tabindex="-1" role="dialog" aria-labelledby="tangibleModalLabel"></div>
-		<div class="modal fade" id="dlwtModal" tabindex="-1" role="dialog" aria-labelledby="dlwtModalLabel"></div>
-		<div class="modal fade" id="naturenetModal" tabindex="-1" role="dialog" aria-labelledby="naturenetModalLabel"></div>
-		<div class="modal fade" id="marionetteModal" tabindex="-1" role="dialog" aria-labelledby="marionetteModalLabel"></div>
-		<div class="modal fade" id="announce1Modal" tabindex="-1" role="dialog" aria-labelledby="announce1ModalLabel"></div>
+		<div class="modal fade" id="maherModal" tabindex="-1" role="dialog" aria-labelledby="maherModalLabel"></div>
+		<div class="modal fade" id="latulipeModal" tabindex="-1" role="dialog" aria-labelledby="latulipeModalLabel"></div>
+		<div class="modal fade" id="lipfordModal" tabindex="-1" role="dialog" aria-labelledby="lipfordModalLabel"></div>
+		<div class="modal fade" id="mahzoonModal" tabindex="-1" role="dialog" aria-labelledby="mahzoonModalLabel"></div>
+		<div class="modal fade" id="macneilModal" tabindex="-1" role="dialog" aria-labelledby="macneilModalLabel"></div>
+		<div class="modal fade" id="okerlundModal" tabindex="-1" role="dialog" aria-labelledby="okerlundModalLabel"></div>
+		<div class="modal fade" id="thomasModal" tabindex="-1" role="dialog" aria-labelledby="thomasModalLabel"></div>
 		<!-- END OF MODALS -->
 		
 		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script> 
-			$(function(){ $("#announcements1").load("contents/home/announcements.html"); });
-			$(function(){ $("#announcements2").load("contents/home/announcements.html"); });
-			$(function(){ $("#column1").load("contents/home/column1_nn.html"); }); 
-			$(function(){ $("#column2").load("contents/home/column2_marionette.html"); }); 
-			$(function(){ $("#column3").load("contents/home/column3_tangible.html"); }); 
-			$(function(){ $("#column4").load("contents/home/column2_dlwt.html"); }); 
-			$(function(){ $("#column5").load("contents/home/column5.html"); }); 
-			$(function(){ $("#column6").load("contents/home/column6.html"); }); 
-			$(function(){ $("#tangibleModal").load("contents/research/tangible_creativity.html"); });
-			$(function(){ $("#dlwtModal").load("contents/research/dlwt.html"); });
-			$(function(){ $("#naturenetModal").load("contents/research/naturenet.html"); });
-			$(function(){ $("#marionetteModal").load("contents/research/marionette.html"); });
-			$(function(){ $("#announce1Modal").load("contents/home/announce1.html"); });
+			$(function(){ $("#_list").load("contents/people/_list.html"); });
+			$(function(){ $("#column1").load("contents/people/column1_maher.html"); }); 
+			$(function(){ $("#column2").load("contents/people/column2_latulipe.html"); }); 
+			$(function(){ $("#column3").load("contents/people/column3_lipford.html"); }); 
+			$(function(){ $("#column4").load("contents/people/column4_mahzoon.html"); }); 
+			$(function(){ $("#column5").load("contents/people/column5_macneil.html"); }); 
+			$(function(){ $("#column6").load("contents/people/column6_okerlund.html"); }); 
+			$(function(){ $("#column7").load("contents/people/column7_thomas.html"); });
+			 
+			$(function(){ $("#maherModal").load("contents/people/maher.html"); });
+			$(function(){ $("#latulipeModal").load("contents/people/latulipe.html"); });
+			$(function(){ $("#lipfordModal").load("contents/people/lipford.html"); });
+			$(function(){ $("#mahzoonModal").load("contents/people/mahzoon.html"); });
+			$(function(){ $("#macneilModal").load("contents/people/macneil.html"); });
+			$(function(){ $("#okerlundModal").load("contents/people/okerlund.html"); });
+			$(function(){ $("#thomasModal").load("contents/people/thomas.html"); });
 		</script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
