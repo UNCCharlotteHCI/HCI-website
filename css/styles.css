@@ -9,6 +9,17 @@
 	max-width: 200px;
 	margin: 25px 0 0 25px;
 }
+
+.faculty {
+	background-color:#0C6F3E;
+}
+.faculty > h3 {
+	color:white;
+}
+.faculty > p {
+	color:white;
+}
+
 .logo h1{
 	margin-bottom: 0px;
 	font-size: 52px;
@@ -31,7 +42,7 @@
         float: none;
         text-align: center;
     }
-} 
+}
 .navbar-nav li a{
 	padding:5px;
 }
