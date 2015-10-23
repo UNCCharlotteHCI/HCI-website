@@ -6,7 +6,7 @@
 		<title>HCI Group at UNCC</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href = "css/styles.css" rel = "stylesheet">
-		
+
 	</head>
 
 	<body>
@@ -32,7 +32,7 @@
 						<li><a href="research.html">RESEARCH</a></li>
 						<li><a href="#">ACADEMICS</a></li>
 						<li><a href="#">EVENTS</a></li>
-						<!-- IN CASE WE NEEDED A DROPDOWN MENU ITEM 
+						<!-- IN CASE WE NEEDED A DROPDOWN MENU ITEM
 						<li class = "dropdown">
 							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
 							<ul class = "dropdown-menu">
@@ -50,7 +50,7 @@
 		<!-- END OF TOP MENU -->
 		<!-- CAROUSEL CONTENT -->
 		<div id="carousel-content" class="carousel slide" data-ride="carousel">
-			
+
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
@@ -61,44 +61,29 @@
 					</div>
 					-->
 					<div class = "container">
-						<div class = "row">
-							<div class = "col-md-3 col-sm-height">
-								<div id="announcements1"></div>
-							</div>
-							<div class = "col-md-3 col-sm-height">
-								<div id="column1"></div>
-							</div>
-							<div class = "col-md-3 col-sm-height">
-								<div id="column2"></div>
-							</div>
-							<div class = "col-md-3 col-sm-height">
-								<div id="column3"></div>
-							</div>
-						</div>
-					</div>
-				</div>	
-					
-				
-				<div class="item">
-					<div class = "container">
-						<div class = "row">
-							<div class = "col-md-3">
-								<div id="announcements2"></div>
-							</div>
-							<div class = "col-md-3">
-								<div id="column4"></div>
-							</div>
-							<div class = "col-md-3">
-								<div id="column5"></div>
-							</div>
-							<div class = "col-md-3">
-								<div id="column6"></div>
-							</div>
+						<div class = "row vertical-align">
+							<div id="announcements1" class = "equal point col-md-3"></div>
+							<div id="column1" class = "equal point col-md-3"></div>
+							<div id="column2" class = "equal point col-md-3"></div>
+							<div id="column3" class = "point col-md-3"></div>
 						</div>
 					</div>
 				</div>
-				
+
+
+				<div class="item">
+					<div class = "container">
+						<div class = "row">
+							<div id="announcements2" class = "point col-md-3"></div>
+							<div id="column4" class = "point col-md-3"></div>
+							<div id="column5" class = "point col-md-3"></div>
+							<div id="column6" class = "point col-md-3"></div>
+						</div>
+					</div>
+				</div>
+
 			</div>
+
 			<!-- Controls -->
 			<a class="carousel-control left" href="#carousel-content" role="button" data-slide="prev">
 			<span class="glyphicon glyphicon-chevron-left" aria-hidden="false"></span>
@@ -108,13 +93,13 @@
 			<span class="glyphicon glyphicon-chevron-right" aria-hidden="false"></span>
 			<span class="sr-only">Next</span>
 			</a>
-			
+
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#carousel-content" data-slide-to="0" class="active"></li>
 				<li data-target="#carousel-content" data-slide-to="1"></li>
 			</ol>
-			
+
 		</div>
 		<!-- END OF CAROUSEL CONTENT -->
 		<!-- CONTENT -->
@@ -123,7 +108,7 @@
 		<!-- FOOTER -->
 		<div class="footer">Copyright 2015© University of North Carolina at Charlotte, Human Computer Interaction Lab</div>
 		<!-- END OF FOOTER -->
-		
+
 		<!-- MODALS -->
 		<div class="modal fade" id="tangibleModal" tabindex="-1" role="dialog" aria-labelledby="tangibleModalLabel"></div>
 		<div class="modal fade" id="dlwtModal" tabindex="-1" role="dialog" aria-labelledby="dlwtModalLabel"></div>
@@ -131,17 +116,17 @@
 		<div class="modal fade" id="marionetteModal" tabindex="-1" role="dialog" aria-labelledby="marionetteModalLabel"></div>
 		<div class="modal fade" id="announce1Modal" tabindex="-1" role="dialog" aria-labelledby="announce1ModalLabel"></div>
 		<!-- END OF MODALS -->
-		
+
 		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script> 
+		<script>
 			$(function(){ $("#announcements1").load("contents/home/announcements.html"); });
 			$(function(){ $("#announcements2").load("contents/home/announcements.html"); });
-			$(function(){ $("#column1").load("contents/home/column1_nn.html"); }); 
-			$(function(){ $("#column2").load("contents/home/column2_marionette.html"); }); 
-			$(function(){ $("#column3").load("contents/home/column3_tangible.html"); }); 
-			$(function(){ $("#column4").load("contents/home/column2_dlwt.html"); }); 
-			$(function(){ $("#column5").load("contents/home/column5.html"); }); 
-			$(function(){ $("#column6").load("contents/home/column6.html"); }); 
+			$(function(){ $("#column1").load("contents/home/column1_nn.html"); });
+			$(function(){ $("#column2").load("contents/home/column2_marionette.html"); });
+			$(function(){ $("#column3").load("contents/home/column3_tangible.html"); });
+			$(function(){ $("#column4").load("contents/home/column2_dlwt.html"); });
+			$(function(){ $("#column5").load("contents/home/column5.html"); });
+			$(function(){ $("#column6").load("contents/home/column6.html"); });
 			$(function(){ $("#tangibleModal").load("contents/research/tangible_creativity.html"); });
 			$(function(){ $("#dlwtModal").load("contents/research/dlwt.html"); });
 			$(function(){ $("#naturenetModal").load("contents/research/naturenet.html"); });
