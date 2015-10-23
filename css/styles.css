@@ -179,6 +179,13 @@
 	background-color:#efbf2d;
 }
 
+.point.col-md-3 {
+		display:inherit;
+		min-height:100%;
+		padding:0px;
+		margin:5px;
+}
+
 /* solution for column height problem
 		Found @ http://codepen.io/hashem/pen/zwJaE
 */
