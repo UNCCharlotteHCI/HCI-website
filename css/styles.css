@@ -29,6 +29,28 @@
 	color: inherit;
 }
 
+.notscrollable{
+	background-color: #efbf2d;
+}
+.scrollable{
+	background: -webkit-linear-gradient(rgba(239,191,45,1) , rgba(239,191,45,1) 89%, rgba(239,191,45, 0.4));	
+	background: -o-linear-gradient(rgba(239,191,45,1), rgba(239,191,45,1) 89%, rgba(239,191,45,0.4));
+	background: -moz-linear-gradient(rgba(239,191,45,1), rgba(239,191,45,1) 89%, rgba(239,191,45,0.4));
+	background: linear-gradient(rgba(239,191,45,1), rgba(239,191,45,1) 89%, rgba(239,191,45, 0.4));	
+}
+.scrolling{
+	background: -webkit-linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1) 89%, rgba(239,191,45,0.4));
+	background: -o-linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1) 89%, rgba(239,191,45,0.4));
+	background: -moz-linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1) 89%, rgba(239,191,45,0.4));
+	background: linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1) 89%, rgba(239,191,45,0.4));
+}
+.scrolled{
+	background: -webkit-linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1));
+	background: -o-linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1));
+	background: -moz-linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1));
+	background: linear-gradient(rgba(239,191,45,0.4), rgba(239,191,45,1) 11%, rgba(239,191,45,1));
+}
+
 @media (min-width: 768px){
     .navbar-nav {
         margin: 0 auto;
@@ -70,7 +92,6 @@
 	border: 0;
 	border-radius: 0px;
 	max-width:420px;
-
 }
 .thumbnail{
 	background-color: #efbf2d;
@@ -78,7 +99,6 @@
 	border-radius: 0px;
 	padding: 0px;
 	max-width:420px;
-
 }
 .thumbnail img{
 	width: 100%;
@@ -114,12 +134,11 @@
 	padding: 0;
 }
 .col-md-3 .panel-body{
-	background-color: #efbf2d;
 	padding: 0;
 	border: 0;
 }
 .col-md-3 .panel-body .list-group-item{
-	background-color: #efbf2d;
+	background-color: transparent;
 	border: 0;
 	font-size: 12px;
 	padding: 10px 15px 0px 15px;
@@ -173,10 +192,6 @@
 	font-size:10px;
 	text-align:center;
 	width:100%;
-}
-
-.panel.panel-default {
-	background-color:#efbf2d;
 }
 
 .point.col-md-3 {

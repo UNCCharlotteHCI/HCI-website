@@ -153,6 +153,39 @@
 			$(function(){ $("#macneilModal").load("contents/people/macneil.html"); });
 			$(function(){ $("#okerlundModal").load("contents/people/okerlund.html"); });
 			$(function(){ $("#thomasModal").load("contents/people/thomas.html"); });
+            
+            
+            $(window).load(function(){
+                var actual_h = $(".scrollable-menu").prop("scrollHeight");
+                var visible_h = $(".scrollable-menu").height();
+                if (actual_h > visible_h) {$(".scrollable-menu").addClass('scrollable');}
+                else {$(".scrollable-menu").addClass('notscrollable');}
+                $(".scrollable-menu").bind('scroll',function(){
+                    var actual_h = $(".scrollable-menu").prop("scrollHeight");
+                    var visible_h = $(".scrollable-menu").height();
+                    if (actual_h > visible_h)
+                    {
+                        var viewed_h = $(".scrollable-menu").scrollTop();
+                        if (viewed_h < 5)
+                        {
+                            $(".scrollable-menu").addClass('scrollable');
+                            $(".scrollable-menu").removeClass('scrolling');
+                            $(".scrollable-menu").removeClass('scrolled');
+                        }
+                        else if (actual_h - viewed_h > visible_h + 5 ){
+                            $(".scrollable-menu").removeClass('scrollable');
+                            $(".scrollable-menu").addClass('scrolling');
+                            $(".scrollable-menu").removeClass('scrolled');
+                        }
+                        else {
+                            $(".scrollable-menu").removeClass('scrollable');
+                            $(".scrollable-menu").removeClass('scrolling');
+                            $(".scrollable-menu").addClass('scrolled');
+                        }
+                    }
+                });
+            });
+            
 		</script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
