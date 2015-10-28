@@ -64,13 +64,13 @@
 							<div class = "col-md-3 col-sm-height">
 								<div id="list"></div>
 							</div>
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="column1"></div>
 							</div>
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="column2"></div>
 							</div>
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="column3"></div>
 							</div>
 						</div>
@@ -155,7 +155,7 @@
 			$(function(){ $("#thomasModal").load("contents/people/thomas.html"); });
             
             
-            $(window).load(function(){
+            var scroll_effect = function(){
                 var actual_h = $(".scrollable-menu").prop("scrollHeight");
                 var visible_h = $(".scrollable-menu").height();
                 if (actual_h > visible_h) {$(".scrollable-menu").addClass('scrollable');}
@@ -184,7 +184,7 @@
                         }
                     }
                 });
-            });
+            };
             
 		</script>
 		<script src="js/bootstrap.min.js"></script>
