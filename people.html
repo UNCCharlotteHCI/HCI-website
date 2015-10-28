@@ -61,16 +61,16 @@
 					-->
 					<div class = "container">
 						<div class = "row">
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="_list"></div>
 							</div>
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="column1"></div>
 							</div>
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="column2"></div>
 							</div>
-							<div class = "col-md-3 col-sm-height">
+							<div class = "col-md-3">
 								<div id="column3"></div>
 							</div>
 						</div>
@@ -137,7 +137,7 @@
 		
 		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script> 
-			$(function(){ $("#_list").load("contents/people/_list.html"); });
+			$(function(){ $("#_list").load("contents/people/_list.html", scroll_effect); });
 			$(function(){ $("#column1").load("contents/people/column1_maher.html"); }); 
 			$(function(){ $("#column2").load("contents/people/column2_latulipe.html"); }); 
 			$(function(){ $("#column3").load("contents/people/column3_lipford.html"); }); 
@@ -155,7 +155,7 @@
 			$(function(){ $("#thomasModal").load("contents/people/thomas.html"); });
             
             
-            $(window).load(function(){
+            var scroll_effect = function(){
                 var actual_h = $(".scrollable-menu").prop("scrollHeight");
                 var visible_h = $(".scrollable-menu").height();
                 if (actual_h > visible_h) {$(".scrollable-menu").addClass('scrollable');}
@@ -184,7 +184,7 @@
                         }
                     }
                 });
-            });
+            };
             
 		</script>
 		<script src="js/bootstrap.min.js"></script>

@@ -84,8 +84,7 @@
 }
 
 .scrollable-menu {
-    height: auto;
-    max-height: 367px;
+    max-height: 370px;
     overflow-x: hidden;
 }
 .panel{
@@ -199,6 +198,10 @@
 		min-height:100%;
 		padding:0px;
 		margin:5px;
+}
+
+.panel.panel-default {
+	background-color:#efbf2d;
 }
 
 /* solution for column height problem
