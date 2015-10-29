@@ -123,7 +123,7 @@
 
 		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>
-			$(function(){ $("#announcements1").load("contents/home/announcements.html"); });
+			$(function(){ $("#announcements1").load("contents/home/announcements.html", scroll_effect); });
 			$(function(){ $("#announcements2").load("contents/home/announcements.html"); });
 			$(function(){ $("#column1").load("contents/home/column1_nn.html"); });
 			$(function(){ $("#column2").load("contents/home/column2_marionette.html"); });
@@ -136,6 +136,38 @@
 			$(function(){ $("#naturenetModal").load("contents/research/naturenet.html"); });
 			$(function(){ $("#marionetteModal").load("contents/research/marionette.html"); });
 			$(function(){ $("#announce1Modal").load("contents/home/announce1.html"); });
+            
+            var scroll_effect = function(){
+                var actual_h = $(".scrollable-menu").prop("scrollHeight");
+                var visible_h = $(".scrollable-menu").height();
+                if (actual_h > visible_h) {$(".scrollable-menu").addClass('scrollable');}
+                else {$(".scrollable-menu").addClass('notscrollable');}
+                $(".scrollable-menu").bind('scroll',function(){
+                    var actual_h = $(".scrollable-menu").prop("scrollHeight");
+                    var visible_h = $(".scrollable-menu").height();
+                    if (actual_h > visible_h)
+                    {
+                        var viewed_h = $(".scrollable-menu").scrollTop();
+                        if (viewed_h < 5)
+                        {
+                            $(".scrollable-menu").addClass('scrollable');
+                            $(".scrollable-menu").removeClass('scrolling');
+                            $(".scrollable-menu").removeClass('scrolled');
+                        }
+                        else if (actual_h - viewed_h > visible_h + 5 ){
+                            $(".scrollable-menu").removeClass('scrollable');
+                            $(".scrollable-menu").addClass('scrolling');
+                            $(".scrollable-menu").removeClass('scrolled');
+                        }
+                        else {
+                            $(".scrollable-menu").removeClass('scrollable');
+                            $(".scrollable-menu").removeClass('scrolling');
+                            $(".scrollable-menu").addClass('scrolled');
+                        }
+                    }
+                });
+            };
+            
 		</script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
