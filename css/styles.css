@@ -225,6 +225,13 @@
   flex-grow: 1;
 }
 
+.hci-calendar-header {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 .hci-calendar {
 	margin: auto;
+}
+.btn-group{
+	margin: 3px;
 }
