@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>HCI Group at UNCC</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link href="css/vendor/calendar.css" rel="stylesheet" >
 		<link href = "css/styles.css" rel = "stylesheet">
 		
 	</head>
@@ -28,9 +30,9 @@
 					<ul class = "nav navbar-nav">
 						<li><a href="index.html">HOME</a></li>
 						<li><a href="people.html">PEOPLE</a></li>
-						<li class="active"><a href="research.html">RESEARCH</a></li>
+						<li><a href="research.html">RESEARCH</a></li>
 						<li><a href="#">ACADEMICS</a></li>
-						<li><a href="events.html">EVENTS</a></li>
+						<li class="active"><a href="#">EVENTS</a></li>
 						<!-- IN CASE WE NEEDED A DROPDOWN MENU ITEM 
 						<li class = "dropdown">
 							<a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
@@ -47,58 +49,43 @@
 			</div>
 		</div>
 		<!-- END OF TOP MENU -->
-		<!-- CAROUSEL CONTENT -->
-		<div id="carousel-content" class="carousel slide" data-ride="carousel">
-			<!-- Indicators 
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-content" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-content" data-slide-to="1"></li>
-				<li data-target="#carousel-content" data-slide-to="2"></li>
-			</ol>
-			-->
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<!--
-					<img src="..." alt="...">
-					<div class="carousel-caption">
-					...
-					</div>
-					-->
-					<div class = "container">
-						<div class = "row">
-							<div class = "col-md-3 col-sm-height">
-								<div id="announcements1"></div>
-							</div>
-							<div class = "col-md-3 col-sm-height">
-								<div id="column1"></div>
-							</div>
-							<div class = "col-md-3 col-sm-height">
-								<div id="column2"></div>
-							</div>
-							<div class = "col-md-3 col-sm-height">
-								<div id="column3"></div>
-							</div>
+		<!-- EVENT CALENDAR -->
+		<div class="container-fluid" >
+			<div class="row">
+				<div class="col-xs-2 col-xs-offset-1">
+					<h4 class="text-left">HCI Lab Events</h4>
+				</div>
+				<!-- add one column to align btn-groups -->
+				<div class="col-xs-1 pull-right"></div>
+				<div class="col-xs-5 pull-right form-inline">
+					<span class="pull-right">
+						<div class="btn-group">
+							<button class="btn btn-primary" data-calendar-nav="prev"><< Prev</button>
+							<button class="btn btn-default" data-calendar-nav="today">Today</button>
+							<button class="btn btn-primary" data-calendar-nav="next">Next >></button>
 						</div>
-					</div>
-				</div>	
-					
-				
-				
-				
+						<div class="btn-group">
+							<button class="btn btn-warning" data-calendar-view="year">Year</button>
+							<button class="btn btn-warning active" data-calendar-view="month">Month</button>
+							<button class="btn btn-warning" data-calendar-view="week">Week</button>
+							<button class="btn btn-warning" data-calendar-view="day">Day</button>
+						</div>
+					</span>
+				</div>
 			</div>
-			<!-- Controls -->
-			<a class="carousel-control left" href="#carousel-content" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="false"></span>
-			<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control right" href="#carousel-content" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="false"></span>
-			<span class="sr-only">Next</span>
-			</a>
-			
+			<div class="row loading-spinner"> 
+				<div class="col-xs-2 col-xs-offset-5">
+					<i class="fa fa-spinner fa-5x fa-pulse"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+					<div id="calendar" >
+					</div> 
+				</div>
+			</div>
 		</div>
-		<!-- END OF CAROUSEL CONTENT -->
+		<!-- END OF EVENT CALENDAR -->
 		<!-- CONTENT -->
 		<div class="container content">The Human-Computer Interaction Lab at UNC Charlotte is directed by Dr. Celine Latulipe, Dr. Heather Lipford, Dr. Mary Lou Maher, and Dr. David Wilson. Our research covers a broad range of areas in HCI, including Creativity Support Tools, Novel Interactions, Social Networking, and Privacy/Security.</div>
 		<!-- END OF CONTENT -->
@@ -113,20 +100,11 @@
 		<!-- END OF MODALS -->
 		
 		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script> 
-			$(function(){ $("#announcements1").load("contents/home/announcements.html"); });
-			$(function(){ $("#announcements2").load("contents/home/announcements.html"); });
-			$(function(){ $("#column1").load("contents/home/column1_nn.html"); }); 
-			$(function(){ $("#column2").load("contents/home/column2_dlwt.html"); }); 
-			$(function(){ $("#column3").load("contents/home/column3_tangible.html"); }); 
-			$(function(){ $("#column4").load("contents/home/column4.html"); }); 
-			$(function(){ $("#column5").load("contents/home/column5.html"); }); 
-			$(function(){ $("#column6").load("contents/home/column6.html"); }); 
-			$(function(){ $("#tangibleModal").load("contents/research/tangible_creativity.html"); });
-			$(function(){ $("#dlwtModal").load("contents/research/dlwt.html"); });
-			$(function(){ $("#naturenetModal").load("contents/research/naturenet.html"); });
-		</script>
 		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/vendor/underscore-min.js"></script>
+	    <script type="text/javascript" src="js/vendor/calendar.js"></script>
+	    <script type="text/javascript" src="js/calendarevents.js"></script>
+	    <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>	   	
 	</body>
 
 </html>
